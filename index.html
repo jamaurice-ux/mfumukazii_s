@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mfumukazii_S.com</title>
+<style>
+body {
+  background: pink;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+input[type="password"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ffea;
+  color: #111;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 15px #00ffea;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00bbaa;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 15px #00ffea; }
+  50% { box-shadow: 0 0 30px #00ffea; }
+  100% { box-shadow: 0 0 15px #00ffea; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Fixed Logo at the top -->
+  <!-- image from images folder -->
+<div class="logo-container">
+  <img src="images/sibo1.5.jpg" alt="Our Logo">
+</div>
+
+<!-- rest of your index page content here -->
+<!-- etc. -->
+
+<h1>Hey Sibongile ❤️</h1>
+<p>I made something special for you. Enter the secret password:</p>
+
+<input type="password" id="passInput" placeholder="Enter password">
+<button onclick="checkPassword()">Unlock</button>
+
+<script>
+  const correctPassword = "mfumukazii";
+  function checkPassword() {
+    const entered = document.getElementById("passInput").value;
+    if (entered === correctPassword) {
+      window.location.href = 'gallery.html'; // go to gallery page //
+    } else {
+      alert("Sorry, wrong password!");
+    }
+  }
+</script>
+
+</body>
+</html>
